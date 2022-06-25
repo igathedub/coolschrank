@@ -1,0 +1,32 @@
+application {
+  config {
+    baseName Coolschrank,
+    applicationType monolith,
+    packageName de.rola,
+    buildTool gradle,
+    authenticationType session,
+    databaseType no,
+    clientFramework angular,
+    clientPackageManager npm,
+    enableTranslation false,
+    serverPort 80,
+    skipServer true
+    
+    
+  }
+  entities *
+}
+
+entity Fridge {
+
+}
+
+entity Item {
+  name String,
+  actual Integer,
+  target Integer required min(0)
+}
+
+relationship OneToMany {
+  Fridge{inventory} to Item
+}

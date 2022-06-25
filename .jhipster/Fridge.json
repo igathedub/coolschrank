@@ -1,0 +1,22 @@
+{
+  "applications": ["Coolschrank"],
+  "changelogDate": "20220625162848",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "fridge",
+  "fields": [],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Fridge",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "item",
+      "otherEntityRelationshipName": "fridge",
+      "relationshipName": "inventory",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}
